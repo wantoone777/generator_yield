@@ -6,6 +6,7 @@ def get_even(list_of_nums):
         iter_value = list_of_nums[c]
         if iter_value % 2 == 0:
             yield (iter_value, c)
+            print(iter_value, 'was') # optional. Shows previous value. First iteration do not get there.
         c += 1
 
 
@@ -14,6 +15,13 @@ def get_even2(list_of_nums):
         if i % 2 == 0:
             yield i
         
+# def test_gen():
+#     if True:
+#         yield True
+
+
+# test_g = test_gen()
+# print(test_g.__next__()) works only one iteration [yiled True] once
 
 
 L = [2, 3, 4, 7, 7, 13, 8, 10] # len - 8
@@ -29,11 +37,78 @@ L = [2, 3, 4, 7, 7, 13, 8, 10] # len - 8
 
 
 gen = get_even(L)
-
-print(gen.__next__()[0])
-print(gen.__next__()[0])
-
-
+counter = 0
+try:    
+    print(gen.__next__()[0])
+except:
+    print('Stop Iteration :(')
+    counter += 1
+    if counter > 3:
+        print('Fatal')
+try:    
+    print(gen.__next__()[0])
+except:
+    print('Stop Iteration :(')
+    counter += 1
+    if counter > 3:
+        print('Fatal')
+try:    
+    print(gen.__next__()[0])
+except:
+    print('Stop Iteration :(')
+    counter += 1
+    if counter > 3:
+        print('Fatal')
+try:    
+    print(gen.__next__()[0])
+except:
+    print('Stop Iteration :(')
+    counter += 1
+    if counter > 3:
+        print('Fatal')
+try:    
+    print(gen.__next__()[0])
+except:
+    print('Stop Iteration :(')
+    counter += 1
+    if counter > 3:
+        print('Fatal')
+try:    
+    print(gen.__next__()[0])
+except:
+    print('Stop Iteration :(')
+    counter += 1
+    if counter > 3:
+        print('Fatal')
+try:    
+    print(gen.__next__()[0])
+except:
+    print('Stop Iteration :(')
+    counter += 1
+    if counter > 3:
+        print('Fatal')
+try:    
+    print(gen.__next__()[0])
+except:
+    print('Stop Iteration :(')
+    counter += 1
+    if counter > 3:
+        print('Fatal')
+try:    
+    print(gen.__next__()[0])
+except:
+    print('Stop Iteration :(')
+    counter += 1
+    if counter > 3:
+        print('Fatal')
+try:    
+    print(gen.__next__()[0])
+except:
+    print('Stop Iteration :(')
+    counter += 1
+    if counter > 3:
+        print('Fatal')
+print(counter)
 # while True:
 #     try:
 #         res = gen.__next__()
